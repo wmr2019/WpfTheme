@@ -21,8 +21,8 @@
 
         protected MefBootstrapperBase()
         {
-            this.BeforeInitialize();
-            this.Initialize();
+            BeforeInitialize();
+            Initialize();
         }
 
         protected virtual void BeforeInitialize()
@@ -47,7 +47,7 @@
 
             var batch = new CompositionBatch();
             batch.AddExportedValue<IEventAggregator>(new EventAggregator());
-            this.InjectWindowManager(batch);
+            InjectWindowManager(batch);
 
             _container = new CompositionContainer(catalog);
             batch.AddExportedValue(_container);
