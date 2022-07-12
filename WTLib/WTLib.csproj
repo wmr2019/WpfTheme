@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2BDC662-148F-4402-8FF1-57C4B608383A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WTLib</RootNamespace>
+    <AssemblyName>WTLib</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.Core.3.2.0\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.6.6\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\Generic\ConcurrentMultipleDictionary.cs" />
+    <Compile Include="Collections\Generic\MultipleDictionary.cs" />
+    <Compile Include="Collections\Specialized\OneReadQueue.cs" />
+    <Compile Include="Collections\Generic\LinkedQueue.cs" />
+    <Compile Include="Collections\ObjectModel\ObservableGroupingCollection.cs" />
+    <Compile Include="Collections\Priority\IPriorityQueue.cs" />
+    <Compile Include="Excel\ExportColumnInfo.cs" />
+    <Compile Include="Excel\ExportMapper.cs" />
+    <Compile Include="Excel\IExportColumnInfo.cs" />
+    <Compile Include="Excel\IImportColumnInfo.cs" />
+    <Compile Include="Excel\ImportColumnInfo.cs" />
+    <Compile Include="Excel\ImportMapper.cs" />
+    <Compile Include="Excel\ImportMatchException.cs" />
+    <Compile Include="Excel\MapExtensions.cs" />
+    <Compile Include="Excel\TypeExtensions.cs" />
+    <Compile Include="FastMapper\EmitMapper.cs" />
+    <Compile Include="FastMapper\IBuildMapper.cs" />
+    <Compile Include="FastMapper\IMapper.cs" />
+    <Compile Include="FastMapper\MapperBootstrapper.cs" />
+    <Compile Include="FastMapper\MapperBuilder.cs" />
+    <Compile Include="FastMapper\MapperConfigration.cs" />
+    <Compile Include="FastMapper\TypePair.cs" />
+    <Compile Include="FastMapper\UnsafeMapper.cs" />
+    <Compile Include="Inspector\Detectors.cs" />
+    <Compile Include="Inspector\EnumerableExtensions.cs" />
+    <Compile Include="Inspector\FieldLayoutBase.cs" />
+    <Compile Include="Inspector\Helpers\ReflectionHelper.cs" />
+    <Compile Include="Inspector\LayoutPrinter.cs" />
+    <Compile Include="Inspector\Padder.cs" />
+    <Compile Include="Inspector\TypeInspector.cs" />
+    <Compile Include="Inspector\TypeLayout.cs" />
+    <Compile Include="Inspector\TypeLayoutCache.cs" />
+    <Compile Include="Inspector\UnsafeLayout.cs" />
+    <Compile Include="Inspector\UnsafeTree.cs" />
+    <Compile Include="DependencyInjection\Interfaces.cs" />
+    <Compile Include="DependencyInjection\Internal\CompilationContext.cs" />
+    <Compile Include="DependencyInjection\Internal\DynamicAssembly.cs" />
+    <Compile Include="DependencyInjection\Internal\FixedTypeKeyHashtable.cs" />
+    <Compile Include="DependencyInjection\Internal\Meta.cs" />
+    <Compile Include="DependencyInjection\ObjectResolver.cs" />
+    <Compile Include="DependencyInjection\ObjectResolver.Dynamic.cs" />
+    <Compile Include="DependencyInjection\ScopeProvider.cs" />
+    <Compile Include="Logger\ILogService.cs" />
+    <Compile Include="Logger\Log.cs" />
+    <Compile Include="Logger\LogExtension.cs" />
+    <Compile Include="Logger\NlogService.cs" />
+    <Compile Include="Memory\Pinable.cs" />
+    <Compile Include="Memory\StringMemory.cs" />
+    <Compile Include="Memory\StringMemoryExtensions.cs" />
+    <Compile Include="Mvvm\AsyncCommand.cs" />
+    <Compile Include="Mvvm\BindingProxy.cs" />
+    <Compile Include="Mvvm\CommandBase.cs" />
+    <Compile Include="Mvvm\EventToCommandBehavior.cs" />
+    <Compile Include="Mvvm\MvvmExtensions.cs" />
+    <Compile Include="Mvvm\ObservableObject.cs" />
+    <Compile Include="Collections\ObjectModel\ObservableRangeCollection.cs" />
+    <Compile Include="Mvvm\RelayCommand.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Unsafe\UnsafeExtensions.cs" />
+    <Compile Include="Unsafe\UnsafeHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\AdaptiveSynchronize.cs" />
+    <Compile Include="Utils\CollectionViewModelBase.cs" />
+    <Compile Include="Utils\ConvertUtil.cs" />
+    <Compile Include="Utils\Deed.cs" />
+    <Compile Include="Utils\MefBootstrapperBase.cs" />
+    <Compile Include="Utils\ParseAddressPort.cs" />
+    <Compile Include="Utils\PasswordUtil.cs" />
+    <Compile Include="Utils\PropertyChangedBaseExtension.cs" />
+    <Compile Include="Utils\TimeNative.cs" />
+    <Compile Include="Utils\XmlContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Mvvm\System.Windows.Interactivity.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
