@@ -23,6 +23,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using ThemeCore.Common;
 using ThemeMetro.Common;
 
 namespace ThemeMetro.Controls.Behaviors
@@ -148,7 +149,7 @@ namespace ThemeMetro.Controls.Behaviors
             {
                 try
                 {
-                    var border = control.FindChildrenFromTemplate<Border>(ThemeConstants.PART_BorderName);
+                    var border = control.FindChildrenFromTemplate<Border>(StyleConstants.PART_BorderName);
                     if (border != null)
                         border.CornerRadius = GetCornerRadius(control);
                 }
@@ -197,7 +198,7 @@ namespace ThemeMetro.Controls.Behaviors
             {
                 try
                 {
-                    var cc = control.FindChildrenFromTemplate<ContentControl>(ThemeConstants.PART_IconHostName);
+                    var cc = control.FindChildrenFromTemplate<ContentControl>(StyleConstants.PART_IconHostName);
                     if (cc != null)
                     {
                         cc.Content = GetIcon(control);

@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
 
-namespace ThemeMetro.Converters
+namespace ThemeCore.Converters
 {
     public class EqualToBooleanConverter : IMultiValueConverter
     {

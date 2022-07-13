@@ -4,7 +4,7 @@
 *   
 *   =================================
 *   CLR版本  ：4.0.30319.42000
-*   命名空间 ：ThemeMetro.Common
+*   命名空间 ：ThemeCore.Common
 *   文件名称 ：InputProvider.cs
 *   =================================
 *   创 建 者 ：mingrui.wu
@@ -20,7 +20,7 @@
 ***************************************************************************/
 using System.Windows.Input;
 
-namespace ThemeMetro.Common
+namespace ThemeCore.Common
 {
     public class InputProvider
     {

@@ -5,10 +5,10 @@
 *   =================================
 *   CLR版本  ：4.0.30319.42000
 *   命名空间 ：ThemeMetro.Common
-*   文件名称 ：SerialDisposable.cs
+*   文件名称 ：StyleConstants.cs
 *   =================================
 *   创 建 者 ：mingrui.wu
-*   创建日期 ：7/12/2022 3:57:07 PM 
+*   创建日期 ：7/12/2022 4:00:05 PM 
 *   功能描述 ：
 *   使用说明 ：
 *   =================================
@@ -18,31 +18,12 @@
 *   =================================
 *  
 ***************************************************************************/
-using System;
 
 namespace ThemeMetro.Common
 {
-    public sealed class SerialDisposable : IDisposable
+    public class StyleConstants
     {
-        IDisposable _content;
-
-        public IDisposable Content
-        {
-            get { return _content; }
-            set
-            {
-                if (_content != null)
-                {
-                    _content.Dispose();
-                }
-
-                _content = value;
-            }
-        }
-
-        public void Dispose()
-        {
-            Content = null;
-        }
+        public const string PART_BorderName = "PART_Border";
+        public const string PART_IconHostName = "PART_IconHost";
     }
 }

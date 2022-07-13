@@ -4,7 +4,7 @@
 *   
 *   =================================
 *   CLR版本  ：4.0.30319.42000
-*   命名空间 ：ThemeMetro.Common
+*   命名空间 ：ThemeCore.Common
 *   文件名称 ：RelayCommand.cs
 *   =================================
 *   创 建 者 ：mingrui.wu
@@ -21,9 +21,9 @@
 using System;
 using System.Windows.Input;
 
-namespace ThemeMetro.Common
+namespace ThemeCore.Common
 {
-    internal class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         readonly Action _execute;
         readonly Func<bool> _canExecute;
@@ -68,7 +68,7 @@ namespace ThemeMetro.Common
         }
     }
 
-    internal class RelayCommand<T> : ICommand
+    public class RelayCommand<T> : ICommand
     {
         readonly Action<T> _execute;
         readonly Func<T, bool> _canExecute;

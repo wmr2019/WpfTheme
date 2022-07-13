@@ -5,10 +5,10 @@
 *   =================================
 *   CLR版本  ：4.0.30319.42000
 *   命名空间 ：QiCheng.QCTrader.Controls.Converters
-*   文件名称 ：BuyColorConverter.cs
+*   文件名称 ：NotNullToVisibleConverter.cs
 *   =================================
 *   创 建 者 ：mingrui.wu
-*   创建日期 ：7/12/2022 8:42:41 AM 
+*   创建日期 ：7/12/2022 14:23:52 
 *   功能描述 ：
 *   使用说明 ：
 *   =================================
@@ -20,33 +20,23 @@
 ***************************************************************************/
 using System;
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
-using System.Windows.Media;
 
-namespace ThemeMetro.Converters
+namespace ThemeCore.Converters
 {
-    public class BuyColorConverter : IValueConverter
+    public class ReverseBoolToVisibleConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value == null)
-            {
-                return new SolidColorBrush(Color.FromRgb(158, 158, 158));
-            }
-
-            if (value is bool isBuy)
-            {
-                return isBuy
-                    ? new SolidColorBrush(Color.FromRgb(225, 60, 60))
-                    : new SolidColorBrush(Color.FromRgb(158, 158, 158));
-            }
-
-            return new SolidColorBrush(Color.FromRgb(158, 158, 158));
+            if (!(value is bool)) return DependencyProperty.UnsetValue;
+           
+            return (bool)value ? Visibility.Collapsed :Visibility.Visible;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return new SolidColorBrush(Color.FromRgb(158, 158, 158));
+            throw new NotImplementedException();
         }
     }
 }

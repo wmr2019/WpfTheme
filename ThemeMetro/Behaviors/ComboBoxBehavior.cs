@@ -20,7 +20,7 @@
 ***************************************************************************/
 using System.Windows;
 using System.Windows.Controls;
-using ThemeMetro.Common;
+using ThemeCore.Common;
 
 namespace ThemeMetro.Controls.Behaviors
 {

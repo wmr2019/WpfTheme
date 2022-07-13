@@ -64,6 +64,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\ControlStyles\NumericPrice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\Dimension.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,15 +91,8 @@
     <Compile Include="Behaviors\TreeViewBehavior.cs" />
     <Compile Include="Behaviors\WindowBehavior.cs" />
     <Compile Include="Behaviors\WindowChromeBehavior.cs" />
-    <Compile Include="Common\ChineseParser.cs" />
-    <Compile Include="Common\DelayFilter.cs" />
-    <Compile Include="Common\DependencyVariable.cs" />
-    <Compile Include="Common\Enums.cs" />
-    <Compile Include="Common\InputProvider.cs" />
-    <Compile Include="Common\RelayCommand.cs" />
-    <Compile Include="Common\ThemeColor.cs" />
-    <Compile Include="Common\SerialDisposable.cs" />
-    <Compile Include="Common\ThemeConstants.cs" />
+    <Compile Include="Common\StyleColors.cs" />
+    <Compile Include="Common\StyleConstants.cs" />
     <Compile Include="Controls\CompleteComboBox.xaml.cs">
       <DependentUpon>CompleteComboBox.xaml</DependentUpon>
     </Compile>
@@ -106,15 +103,6 @@
       <DependentUpon>DecimalDividedCell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\NumericUpDown.cs" />
-    <Compile Include="Converters\BuyColorConverter.cs" />
-    <Compile Include="Converters\EnumToBooleanConverter.cs" />
-    <Compile Include="Converters\EnumVisibilityConverter.cs" />
-    <Compile Include="Converters\EqualToBooleanConverter.cs" />
-    <Compile Include="Converters\NotNullToVisibleConverter.cs" />
-    <Compile Include="Converters\PrefixWhiteSpaceConverter.cs" />
-    <Compile Include="Converters\ReverseBoolToVisibleConverter.cs" />
-    <Compile Include="Converters\SellColorConverter.cs" />
-    <Compile Include="Converters\TreeViewItemLeftMarginMultiplierConverter.cs" />
     <Compile Include="CustomControl1.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -122,13 +110,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\NumericPrice.cs" />
     <Compile Include="Extensions\DependencyObjectExtension.cs" />
-    <Compile Include="Extensions\TreeViewItemExtension.cs" />
     <Compile Include="Extensions\WindowExtensions.cs" />
-    <Compile Include="Models\DataGridColumnConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -152,7 +142,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Themes\ControlStyles\" />
+    <ProjectReference Include="..\ThemeCore\ThemeCore.csproj">
+      <Project>{4f5b8a7b-71b1-4c1a-a9e9-fbef515f393c}</Project>
+      <Name>ThemeCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

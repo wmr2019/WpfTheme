@@ -29,7 +29,7 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
-using ThemeMetro.Models;
+using ThemeCore.Models;
 
 namespace ThemeMetro.Controls.Behaviors
 {

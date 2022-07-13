@@ -4,7 +4,7 @@
 *   
 *   =================================
 *   CLR版本  ：4.0.30319.42000
-*   命名空间 ：ThemeMetro.Common
+*   命名空间 ：ThemeCore.Common
 *   文件名称 ：DependencyVariable.cs
 *   =================================
 *   创 建 者 ：mingrui.wu
@@ -21,7 +21,7 @@
 using System.Windows;
 using System.Windows.Data;
 
-namespace ThemeMetro.Common
+namespace ThemeCore.Common
 {
     public sealed class DependencyVariable<T> : DependencyObject
     {

@@ -139,7 +139,7 @@ namespace ThemeMetro.Controls.Behaviors
                 "BorderBrush",
                 typeof(SolidColorBrush),
                 typeof(WindowChromeBehavior),
-                new PropertyMetadata(ThemeColor.GetWindowActiveBorderBrush()));
+                new PropertyMetadata(StyleColors.GetWindowActiveBorderBrush()));
 
         private static void OnTitleHeightPropertyChange(DependencyObject obj, DependencyPropertyChangedEventArgs e)
         {

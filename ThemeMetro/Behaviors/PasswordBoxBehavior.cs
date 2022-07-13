@@ -250,7 +250,7 @@ namespace ThemeMetro.Controls.Behaviors
             {
                 try
                 {
-                    var cc = ctrl.FindChildrenFromTemplate<ContentControl>(ThemeConstants.PART_IconHostName);
+                    var cc = ctrl.FindChildrenFromTemplate<ContentControl>(StyleConstants.PART_IconHostName);
                     if (cc != null)
                     {
                         cc.Content = GetIcon(ctrl);

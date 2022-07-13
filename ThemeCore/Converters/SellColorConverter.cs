@@ -23,7 +23,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace ThemeMetro.Converters
+namespace ThemeCore.Converters
 {
     public class SellColorConverter : IValueConverter
     {

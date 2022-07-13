@@ -4,7 +4,7 @@
 *   
 *   =================================
 *   CLR版本  ：4.0.30319.42000
-*   命名空间 ：ThemeMetro.Common
+*   命名空间 ：ThemeCore.Common
 *   文件名称 ：ThemeConstants.cs
 *   =================================
 *   创 建 者 ：mingrui.wu
@@ -19,11 +19,11 @@
 *  
 ***************************************************************************/
 
-namespace ThemeMetro.Common
+namespace ThemeCore.Common
 {
     public class ThemeConstants
     {
-        public const string PART_BorderName = "PART_Border";
-        public const string PART_IconHostName = "PART_IconHost";
+        //public const string PART_BorderName = "PART_Border";
+        //public const string PART_IconHostName = "PART_IconHost";
     }
 }

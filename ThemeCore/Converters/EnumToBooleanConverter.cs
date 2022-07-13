@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Data;
 
-namespace ThemeMetro.Converters
+namespace ThemeCore.Converters
 {
     [ValueConversion(typeof(System.Enum), typeof(bool))]
     public class EnumToBooleanConverter : IValueConverter

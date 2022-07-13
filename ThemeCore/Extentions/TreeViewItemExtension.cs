@@ -4,7 +4,7 @@
 *   
 *   =================================
 *   CLR版本  ：4.0.30319.42000
-*   命名空间 ：ThemeMetro.Extensions
+*   命名空间 ：ThemeCore.Extensions
 *   文件名称 ：TreeViewItemExtension.cs
 *   =================================
 *   创 建 者 ：mingrui.wu
@@ -21,7 +21,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace ThemeMetro.Converters
+namespace ThemeCore.Converters
 {
     public static class TreeViewItemExtension
     {

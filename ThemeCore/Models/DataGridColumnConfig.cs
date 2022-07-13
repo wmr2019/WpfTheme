@@ -4,7 +4,7 @@
 *   
 *   =================================
 *   CLR版本  ：4.0.30319.42000
-*   命名空间 ：ThemeMetro.Models
+*   命名空间 ：ThemeCore.Models
 *   文件名称 ：DataGridColumnConfig.cs
 *   =================================
 *   创 建 者 ：mingrui.wu
@@ -20,7 +20,7 @@
 ***************************************************************************/
 using System.ComponentModel;
 
-namespace ThemeMetro.Models
+namespace ThemeCore.Models
 {
     public class DataGridColumnConfig : INotifyPropertyChanged
     {

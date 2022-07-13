@@ -23,6 +23,7 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
+using ThemeCore.Common;
 using ThemeMetro.Common;
 
 namespace ThemeMetro.Controls

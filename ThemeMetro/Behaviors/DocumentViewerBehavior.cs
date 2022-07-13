@@ -23,7 +23,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
-using ThemeMetro.Common;
+using ThemeCore.Common;
 
 namespace ThemeMetro.Controls.Behaviors
 {
