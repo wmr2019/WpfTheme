@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{87119e7e-d5fc-48b2-97b3-1ba98fdaa55c}</ProjectGuid>
+    <ProjectGuid>{87119E7E-D5FC-48B2-97B3-1BA98FDAA55C}</ProjectGuid>
     <OutputType>library</OutputType>
     <RootNamespace>ThemeMetro</RootNamespace>
     <AssemblyName>ThemeMetro</AssemblyName>
@@ -14,7 +14,6 @@
     <WarningLevel>4</WarningLevel>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -32,71 +31,124 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    
     <Reference Include="Microsoft.CSharp" />
-    
-    
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    
-    
-    <Reference Include="System.Net.Http"/>
-    
-    
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    
-    
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    
   </ItemGroup>
-
   <ItemGroup>
-    <Page Include="Themes\Generic.xaml">
-       <Generator>MSBuild:Compile</Generator>
+    <Page Include="Controls\CompleteComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\DecimalCell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DecimalDividedCell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Brushes\DarkBrushs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Behaviors\ButtonBehavior.cs" />
+    <Compile Include="Behaviors\ComboBoxBehavior.cs" />
+    <Compile Include="Behaviors\DataGridBehavior.cs" />
+    <Compile Include="Behaviors\DataGridCellBehavior.cs" />
+    <Compile Include="Behaviors\DataGridTemplateColumnBehavior.cs" />
+    <Compile Include="Behaviors\DocumentViewerBehavior.cs" />
+    <Compile Include="Behaviors\EnterKeyTraversal.cs" />
+    <Compile Include="Behaviors\FocusWhenSelectedBehavior.cs" />
+    <Compile Include="Behaviors\ItemsControlBehavior.cs" />
+    <Compile Include="Behaviors\PasswordBoxBehavior.cs" />
+    <Compile Include="Behaviors\TabItemBehavior.cs" />
+    <Compile Include="Behaviors\TextBoxBehavior.cs" />
+    <Compile Include="Behaviors\TreeViewBehavior.cs" />
+    <Compile Include="Behaviors\WindowBehavior.cs" />
+    <Compile Include="Behaviors\WindowChromeBehavior.cs" />
+    <Compile Include="Common\ChineseParser.cs" />
+    <Compile Include="Common\DelayFilter.cs" />
+    <Compile Include="Common\DependencyVariable.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Common\InputProvider.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Common\ThemeColor.cs" />
+    <Compile Include="Common\SerialDisposable.cs" />
+    <Compile Include="Common\ThemeConstants.cs" />
+    <Compile Include="Controls\CompleteComboBox.xaml.cs">
+      <DependentUpon>CompleteComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DecimalCell.xaml.cs">
+      <DependentUpon>DecimalCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DecimalDividedCell.xaml.cs">
+      <DependentUpon>DecimalDividedCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NumericUpDown.cs" />
+    <Compile Include="Converters\BuyColorConverter.cs" />
+    <Compile Include="Converters\EnumToBooleanConverter.cs" />
+    <Compile Include="Converters\EnumVisibilityConverter.cs" />
+    <Compile Include="Converters\EqualToBooleanConverter.cs" />
+    <Compile Include="Converters\NotNullToVisibleConverter.cs" />
+    <Compile Include="Converters\PrefixWhiteSpaceConverter.cs" />
+    <Compile Include="Converters\ReverseBoolToVisibleConverter.cs" />
+    <Compile Include="Converters\SellColorConverter.cs" />
+    <Compile Include="Converters\TreeViewItemLeftMarginMultiplierConverter.cs" />
     <Compile Include="CustomControl1.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Themes\Brushes\LightBrushs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
-
   <ItemGroup>
+    <Compile Include="Controls\NumericPrice.cs" />
+    <Compile Include="Extensions\DependencyObjectExtension.cs" />
+    <Compile Include="Extensions\TreeViewItemExtension.cs" />
+    <Compile Include="Extensions\WindowExtensions.cs" />
+    <Compile Include="Models\DataGridColumnConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-
+  <ItemGroup>
+    <Folder Include="Themes\Controls\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
