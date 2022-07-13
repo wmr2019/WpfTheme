@@ -7,8 +7,8 @@
 *   命名空间 ：QiCheng.QCTrader.Controls.Converters
 *   文件名称 ：NotNullToVisibleConverter.cs
 *   =================================
-*   创 建 者 ：wei.feng
-*   创建日期 ：2019/9/18 14:23:52 
+*   创 建 者 ：mingrui.wu
+*   创建日期 ：7/12/2022 14:23:52 
 *   功能描述 ：
 *   使用说明 ：
 *   =================================
