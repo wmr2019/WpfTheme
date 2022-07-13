@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeCore", "ThemeCore\Them
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeMetro", "ThemeMetro\ThemeMetro.csproj", "{87119E7E-D5FC-48B2-97B3-1BA98FDAA55C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeWindow", "ThemeWindow\ThemeWindow.csproj", "{BC573C05-EE6E-473D-979B-12E1A5BE4BF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{87119E7E-D5FC-48B2-97B3-1BA98FDAA55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87119E7E-D5FC-48B2-97B3-1BA98FDAA55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87119E7E-D5FC-48B2-97B3-1BA98FDAA55C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC573C05-EE6E-473D-979B-12E1A5BE4BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC573C05-EE6E-473D-979B-12E1A5BE4BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC573C05-EE6E-473D-979B-12E1A5BE4BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC573C05-EE6E-473D-979B-12E1A5BE4BF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
