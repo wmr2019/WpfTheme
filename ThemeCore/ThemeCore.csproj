@@ -64,7 +64,9 @@
     <Compile Include="Converters\TreeViewItemLeftMarginMultiplierConverter.cs" />
     <Compile Include="Extentions\TreeViewItemExtension.cs" />
     <Compile Include="Models\DataGridColumnConfig.cs" />
+    <Compile Include="Models\Theme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ThemeService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

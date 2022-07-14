@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using ThemeWindow.ViewModel;
+using Unity;
 
 namespace ThemeWindow
 {
@@ -13,5 +9,23 @@ namespace ThemeWindow
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            var container = new UnityContainer();
+
+            var mainWindowVM = container.Resolve<MainWindowViewModel>();
+            var mainWindow = container.Resolve<MainWindow>();
+            mainWindow.DataContext = mainWindowVM;
+            Current.MainWindow = mainWindow;
+
+            mainWindow.Show();
+        }
+
+        protected override void OnExit(ExitEventArgs e)
+        {
+            base.OnExit(e);
+        }
     }
 }

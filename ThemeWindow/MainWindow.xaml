@@ -29,7 +29,11 @@
         <!--<ctrl:NumericPrice Value="100" DecimalDigit="2" MaxValue="100" MinValue="0"
                            Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
 
-        <ctrl:CompleteComboBox Grid.Row="1" ItemsSource="{Binding Accounts}" TextSearch.TextPath="Code" DisplayMemberPath="Code"
+        <ctrl:CompleteComboBox Grid.Row="1"
+                               ItemsSource="{Binding Themes}"
+                               SelectedItem="{Binding SelectedTheme, UpdateSourceTrigger=PropertyChanged}"
+                               TextSearch.TextPath="Code"
+                               DisplayMemberPath="Code"
                                Style="{StaticResource CompleteComboBoxStyle}"
                                Height="26" Width="300"/>
 
