@@ -5,17 +5,11 @@
     xmlns:behavior ="clr-namespace:ThemeMetro.Controls.Behaviors"
     xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
     >
-    
-    <Style x:Key="FocusVisualStyle">
-        <Setter Property="Control.Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Rectangle StrokeDashArray="1 2" StrokeThickness="1" Stroke="LightGray" SnapsToDevicePixels="true" Margin="2"/>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/Icons.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
     <Style x:Key="CompleteComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
         <Setter Property="OverridesDefaultStyle" Value="true"/>
         <Setter Property="IsTabStop" Value="false"/>
@@ -33,16 +27,10 @@
                                 Padding="2" 
                                 SnapsToDevicePixels="true" 
                                 Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">
-                            <Path x:Name="arrow"   
-                                  Data="M512 597.333333l-170.666667-170.666666h341.333334z"     
-                                  Fill="LightGray" 
-                                  HorizontalAlignment="Center" Margin="0" Height="6" Width="6" Stretch="Uniform"/>
+                            <Path x:Name="arrow" Style="{StaticResource Icon.Down.Triangle.Small}" HorizontalAlignment="Center"/>
                         </Border>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <DataTrigger Binding="{Binding IsDropDownOpen,RelativeSource={RelativeSource AncestorType={x:Type ctrl:CompleteComboBox}}}" Value="true">
-                            <Setter Property="Fill" TargetName="arrow" Value="white"/>
-                        </DataTrigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Fill" TargetName="arrow" Value="gray"/>
                         </Trigger>
@@ -69,9 +57,11 @@
                                 <Condition Property="IsSelected" Value="False"/>
                             </MultiTrigger.Conditions>
                             <Setter Property="Background" Value="{DynamicResource HoverBackgroundColorBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextFontColorBrush}"/>
                         </MultiTrigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Background" Value="{DynamicResource SelectBackgroundColorBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextFontColorBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -100,6 +90,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <ControlTemplate x:Key="CompleteComboBoxEditableTemplate" TargetType="{x:Type ctrl:CompleteComboBox}">
         <Grid x:Name="templateRoot" >
             <Grid.ColumnDefinitions>
@@ -109,12 +100,12 @@
 
             <Popup x:Name="PART_Popup" 
                     AllowsTransparency="true" 
-                    Grid.ColumnSpan="2" 
+                    Grid.ColumnSpan="2"
                     IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" 
                     PopupAnimation="Slide"                 
                     Placement="Bottom">
                 <Border x:Name="dropDownBorder" 
-                        BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" 
+                        BorderBrush="{DynamicResource ControlBorderColorBrush}" 
                         BorderThickness="1"                            
                         MaxHeight="{TemplateBinding MaxDropDownHeight}"
                         MinWidth="{Binding ActualWidth, ElementName=templateRoot}"
@@ -163,16 +154,17 @@
                          Style="{StaticResource ComboBoxEditableTextBox}"                         
                          CaretBrush="{TemplateBinding Foreground}"
                          Padding="{TemplateBinding Padding}"
+                         Foreground="{DynamicResource SystemFontColorBrush}"
                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"/>
             </Grid>
         </Grid>
         <ControlTemplate.Triggers>
             <MultiTrigger>
                 <MultiTrigger.Conditions>
-                    <Condition Property="IsKeyboardFocused" SourceName="PART_EditableTextBox"  Value="True"/>
+                    <Condition Property="IsKeyboardFocused" SourceName="PART_EditableTextBox" Value="True"/>
                     <Condition Property="Validation.HasError" Value="True"/>
                 </MultiTrigger.Conditions>
-                <Setter Property="BorderBrush"  Value="Red"/>
+                <Setter Property="BorderBrush" Value="Red"/>
             </MultiTrigger>
 
             <Trigger Property="behavior:ComboBoxBehavior.InputFilter" Value="OnlyInteger">
@@ -198,12 +190,12 @@
     </ControlTemplate>
 
     <Style x:Key="CompleteComboBoxStyle" TargetType="{x:Type ctrl:CompleteComboBox}">
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="{DynamicResource SystemFontColorBrush}"/>
         <Setter Property="Height" Value="24"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisualStyle}"/>
         <Setter Property="Background" Value="{DynamicResource SystemColorBrush}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource ControlBackgroundColorBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ControlBorderColorBrush}"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource CompleteComboBoxItemStyle}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>

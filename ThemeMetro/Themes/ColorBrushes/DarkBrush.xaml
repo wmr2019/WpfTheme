@@ -45,6 +45,7 @@
     <SolidColorBrush x:Key="ControlBackgroundColorBrush" Color="{StaticResource ControlBackgroundColor}" opt:Freeze="True" />
     <SolidColorBrush x:Key="ControlOverBackgroundColorBrush" Color="{StaticResource ControlOverBackgroundColor}" opt:Freeze="True" />
     <SolidColorBrush x:Key="ControlBorderColorBrush" Color="{StaticResource ControlBorderColor}" opt:Freeze="True" />
+    <SolidColorBrush x:Key="ControlIconColorBrush" Color="{StaticResource SystemFontColor}" opt:Freeze="True" />
 
     <SolidColorBrush x:Key="HoverBackgroundColorBrush" Color="{StaticResource HoverBackgroundColor}" opt:Freeze="True" />
     <SolidColorBrush x:Key="SelectBackgroundColorBrush" Color="{StaticResource SelectBackgroundColor}" opt:Freeze="True" />

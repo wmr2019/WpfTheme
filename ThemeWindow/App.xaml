@@ -8,6 +8,8 @@
             <ResourceDictionary.MergedDictionaries>
 
                 <ResourceDictionary Source="/ThemeMetro;component/Themes/Generic.xaml"/>
+                <!--<ResourceDictionary Source="/ThemeMetro;component/Themes/ColorBrushes/LightBrush.xaml"/>-->
+                <ResourceDictionary Source="/ThemeMetro;component/Themes/ColorBrushes/DarkBrush.xaml"/>
                 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

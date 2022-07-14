@@ -30,7 +30,9 @@ namespace ThemeWindow
         public List<Account> Accounts { get; } = new List<Account>
         {
             new Account { Id = "1001", Code = "Leo" },
-            new Account { Id = "1002", Code = "Agle" },
+            new Account { Id = "1002", Code = "Ulrica" },
+            new Account { Id = "1003", Code = "Lilith" },
+            new Account { Id = "1004", Code = "Aaron" },
         };
     }
 }

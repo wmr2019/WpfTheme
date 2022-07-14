@@ -18,4 +18,5 @@
     <sys:Double x:Key="NoteTextSize">10</sys:Double>
 
     <sys:Double x:Key="TagTextSize">9</sys:Double>
+
 </ResourceDictionary>

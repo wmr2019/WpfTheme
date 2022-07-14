@@ -7,7 +7,7 @@
         xmlns:ctrl="clr-namespace:ThemeMetro.Controls;assembly=ThemeMetro"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="{DynamicResource SystemColorBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -24,12 +24,8 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Path Data="M512 853.333333 0 170.666667l1024 0L512 853.333333z"
-              Fill="Red"
-              Width="20" Height="20"
-              Stretch="Uniform"
-              Stroke="White"
-              />
+        <Path Style="{StaticResource Icon.Down.Triangle.Small}" Margin="5"/>
+        
         <!--<ctrl:NumericPrice Value="100" DecimalDigit="2" MaxValue="100" MinValue="0"
                            Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
 
