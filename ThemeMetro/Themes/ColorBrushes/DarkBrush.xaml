@@ -19,6 +19,7 @@
 
     <!-- Blue0048 \ Blue0040 Black0032 -->
     <Color x:Key="HoverBackgroundColor">#00334F</Color>
+    <Color x:Key="HoverFontColor">#FFFFFF</Color>
     <Color x:Key="SelectBackgroundColor">#004E77</Color>
     
     <!-- Black0100 \ Black0003 \ Blue0006 \ Black0009 -->
@@ -48,6 +49,7 @@
     <SolidColorBrush x:Key="ControlIconColorBrush" Color="{StaticResource SystemFontColor}" opt:Freeze="True" />
 
     <SolidColorBrush x:Key="HoverBackgroundColorBrush" Color="{StaticResource HoverBackgroundColor}" opt:Freeze="True" />
+    <SolidColorBrush x:Key="HoverFontColorBrush" Color="{StaticResource HoverFontColor}" opt:Freeze="True" />
     <SolidColorBrush x:Key="SelectBackgroundColorBrush" Color="{StaticResource SelectBackgroundColor}" opt:Freeze="True" />
 
     <SolidColorBrush x:Key="WindowBackgroundColorBrush" Color="{StaticResource WindowBackgroundColor}" opt:Freeze="True" />
