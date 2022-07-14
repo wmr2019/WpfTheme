@@ -1,24 +1,4 @@
-﻿/**************************************************************************
-*   Copyright (c) QiCheng Tech Corporation.  All rights reserved.
-*   http://www.iqichengtech.com 
-*   
-*   =================================
-*   CLR版本  ：4.0.30319.42000
-*   命名空间 ：QiCheng.QCTrader.Controls.Converters
-*   文件名称 ：SellColorConverter.cs
-*   =================================
-*   创 建 者 ：mingrui.wu
-*   创建日期 ：7/12/2022 8:42:59 AM 
-*   功能描述 ：
-*   使用说明 ：
-*   =================================
-*   修 改 者 ：
-*   修改日期 ：
-*   修改内容 ：
-*   =================================
-*  
-***************************************************************************/
-using System;
+﻿using System;
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
