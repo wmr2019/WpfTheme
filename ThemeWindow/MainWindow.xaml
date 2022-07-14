@@ -48,13 +48,22 @@
                                DisplayMemberPath="Code"
                                Style="{StaticResource CompleteComboBoxStyle}"
                                HorizontalAlignment="Left"
-                               Height="26" Width="300"/>
+                               Width="300"/>
+        <ctrl:CompleteComboBox Grid.Row="1" Grid.Column="1"
+                               ItemsSource="{Binding Themes}"
+                               SelectedItem="{Binding SelectedTheme, UpdateSourceTrigger=PropertyChanged}"
+                               TextSearch.TextPath="Code"
+                               DisplayMemberPath="Code"
+                               Style="{StaticResource CompleteComboBoxStyle}"
+                               HorizontalAlignment="Right"
+                               Width="300"
+                               IsEnabled="False"/>
         <!--<Path Style="{StaticResource Icon.Down.Triangle.Small}" Margin="5"/>-->
         
         <!--<ctrl:NumericPrice Value="100" DecimalDigit="2" MaxValue="100" MinValue="0"
                            Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
 
-        <TabControl Grid.Row="2" Grid.ColumnSpan="2"
+        <TabControl Grid.Row="2" Grid.ColumnSpan="2" Margin="0,5,0,0"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <TabItem Header="Colors">
                 

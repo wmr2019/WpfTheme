@@ -16,13 +16,6 @@ namespace ThemeMetro.Controls
     {
         readonly SerialDisposable disposable = new SerialDisposable();
 
-        //static CompleteComboBox()
-        //{
-        //    DefaultStyleKeyProperty.OverrideMetadata(
-        //        typeof(CompleteComboBox),
-        //        new FrameworkPropertyMetadata(typeof(CompleteComboBox)));
-        //}
-
         TextBox editableTextBoxCache;
         public TextBox EditableTextBox
         {

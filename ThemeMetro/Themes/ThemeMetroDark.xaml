@@ -1,11 +1,12 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/ThemeMetro;component/Themes/Dimension.xaml"/>
-        <ResourceDictionary Source="/ThemeMetro;component/Themes/Icons.xaml"/>
-        <ResourceDictionary Source="/ThemeMetro;component/Themes/Misc.xaml"/>
-
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ColorBrushes/DarkBrush.xaml"/>
+
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/FocusVisual.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/Icons.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/ToggleButtonShare.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/ComboBoxShare.xaml"/>
 
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/CompleteComboBox.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/NumericPrice.xaml"/>

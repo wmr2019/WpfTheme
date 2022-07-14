@@ -1,5 +1,7 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
 
     <Style x:Key="MetroIconBase" TargetType="{x:Type Path}">
         <Setter Property="Margin" Value="0"/>
@@ -35,4 +37,5 @@
            BasedOn="{StaticResource MetroIconSmall}">
         <Setter Property="Data" Value="{StaticResource DownTriangleIcon}"/>
     </Style>
+    
 </ResourceDictionary>
