@@ -8,9 +8,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
+        <Path Data="M512 853.333333 0 170.666667l1024 0L512 853.333333z"
+              Fill="Red"
+              Width="20" Height="20"
+              Stretch="Uniform"
+              Stroke="White"
+              />
         <!--<ctrl:NumericPrice Value="100" DecimalDigit="2" MaxValue="100" MinValue="0"
                            Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
+
+        <ctrl:CompleteComboBox Grid.Row="1" ItemsSource="{Binding Accounts}" TextSearch.TextPath="Code" DisplayMemberPath="Code"
+                               Style="{StaticResource CompleteComboBoxStyle}"
+                               Height="26" Width="300"/>
 
     </Grid>
 </Window>

@@ -4,6 +4,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
     <sys:Double x:Key="DisabledOpacity">0.8</sys:Double>
+    <sys:Double x:Key="InactiveOpacity">0.5</sys:Double>
     
     <sys:Double x:Key="HeaderTextSize">26</sys:Double>
     <sys:Double x:Key="SubHeaderTextSize">20</sys:Double>

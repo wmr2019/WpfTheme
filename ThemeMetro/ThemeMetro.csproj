@@ -64,6 +64,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\ControlStyles\CompleteComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\ControlStyles\NumericPrice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,9 +107,6 @@
       <DependentUpon>DecimalDividedCell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\NumericUpDown.cs" />
-    <Compile Include="CustomControl1.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Page Include="Themes\ColorBrushes\LightBrush.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

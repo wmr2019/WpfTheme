@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ThemeWindow.Models;
 
 namespace ThemeWindow
 {
@@ -23,6 +24,13 @@ namespace ThemeWindow
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
         }
+
+        public List<Account> Accounts { get; } = new List<Account>
+        {
+            new Account { Id = "1001", Code = "Leo" },
+            new Account { Id = "1002", Code = "Agle" },
+        };
     }
 }

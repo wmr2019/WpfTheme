@@ -6,4 +6,57 @@
     mc:Ignorable="po"
     >
 
+    <Color x:Key="SystemColor">#FFFFFF</Color>
+    <Color x:Key="SystemFontColor">#000000</Color>
+    <Color x:Key="TextFontColor">#252526</Color>
+
+    <Color x:Key="WatermarkTextFontColor">#9e9e9e</Color>
+
+    <!-- Black0008 \ Black0028 \ Black0024 Black0008 Black0009-->
+    <Color x:Key="ControlBackgroundColor">#616161</Color>
+    <Color x:Key="ControlOverBackgroundColor">#333334</Color>
+    <Color x:Key="ControlBorderColor">#707070</Color>
+
+    <!-- Blue0048 \ Blue0040 Black0032 -->
+    <Color x:Key="HoverBackgroundColor">#00334F</Color>
+    <Color x:Key="SelectBackgroundColor">#004E77</Color>
+
+    <!-- Black0100 \ Black0003 \ Blue0006 \ Black0009 -->
+    <Color x:Key="WindowBackgroundColor">#181920</Color>
+    <Color x:Key="WindowHeaderColor">#252526</Color>
+    <Color x:Key="ActiveBorderColor">#1E90FF</Color>
+    <Color x:Key="InactiveBorderColor">#808080</Color>
+
+    <!--与主题配色无关，颜色固定不变-->
+    <Color x:Key="Red0001">#C6101E</Color>
+    <Color x:Key="Red0006">#E13C3C</Color>
+    <Color x:Key="Yellow0001">#FFC900</Color>
+    <Color x:Key="Blue0024">#0076F6</Color>
+    <Color x:Key="Blue0032">#00C0C0</Color>
+    <Color x:Key="Green0001">#00B01A</Color>
+    <Color x:Key="Green0010">#00E700</Color>
+    <Color x:Key="Green0006">#00E700</Color>
+
+    <SolidColorBrush x:Key="SystemFontColorBrush" Color="{StaticResource SystemFontColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="TextFontColorBrush" Color="{StaticResource TextFontColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="WatermarkTextFontColorBrush" Color="{StaticResource WatermarkTextFontColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="Brush" Color="{StaticResource }" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="ControlBackgroundColorBrush" Color="{StaticResource ControlBackgroundColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="ControlOverBackgroundColorBrush" Color="{StaticResource ControlOverBackgroundColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="ControlBorderColorBrush" Color="{StaticResource ControlBorderColor}" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="HoverBackgroundColorBrush" Color="{StaticResource HoverBackgroundColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="SelectBackgroundColorBrush" Color="{StaticResource SelectBackgroundColor}" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="WindowBackgroundColorBrush" Color="{StaticResource WindowBackgroundColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="WindowHeaderColorBrush" Color="{StaticResource WindowHeaderColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="ActiveBorderColorBrush" Color="{StaticResource ActiveBorderColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="InactiveBorderColorBrush" Color="{StaticResource InactiveBorderColor}" po:Freeze="True" />
+
+    <SolidColorBrush x:Key="ConfirmButtonBackgroundBrush" Color="{StaticResource Red0001}" po:Freeze="True" />
+    <SolidColorBrush x:Key="CancelButtonBackgroundBrush" Color="{StaticResource Red0001}" po:Freeze="True" />
+    <SolidColorBrush x:Key="BuyButtonBackgroundBrush" Color="{StaticResource Red0001}" po:Freeze="True" />
+    <SolidColorBrush x:Key="SellButtonBackgroundBrush" Color="{StaticResource Green0001}" po:Freeze="True" />
+
 </ResourceDictionary>
