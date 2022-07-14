@@ -4,10 +4,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
-                <!--<ResourceDictionary Source="/ThemeMetro;component/Themes/ThemeMetroDark.xaml"/>-->
-                <ResourceDictionary Source="/ThemeMetro;component/Themes/ThemeMetroLight.xaml"/>
-                
+                <ResourceDictionary Source="/ThemeMetro;component/Themes/ThemeMetroDark.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

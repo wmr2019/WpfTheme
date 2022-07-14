@@ -7,35 +7,62 @@
         xmlns:ctrl="clr-namespace:ThemeMetro.Controls;assembly=ThemeMetro"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="{DynamicResource SystemColorBrush}">
+    <Grid Margin="10,0,10,10"
+          SnapsToDevicePixels="True"
+          UseLayoutRounding="True"
+          Grid.IsSharedSizeScope="True"
+          Background="{DynamicResource SystemColorBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <Path Style="{StaticResource Icon.Down.Triangle.Small}" Margin="5"/>
-        
-        <!--<ctrl:NumericPrice Value="100" DecimalDigit="2" MaxValue="100" MinValue="0"
-                           Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
+        <Menu Background="Transparent" Grid.ColumnSpan="2">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit" IsEnabled="False" />
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy" IsEnabled="False"/>
+                <MenuItem Header="Cut" IsEnabled="False"/>
+                <MenuItem Header="Paste" IsEnabled="False"/>
+            </MenuItem>
+            <MenuItem Header="Color Scheme">
+                <MenuItem Header="Light" IsCheckable="True" StaysOpenOnClick="True"/>
+                <MenuItem Header="Dark"/>
+            </MenuItem>
+            <MenuItem Header="Help" IsEnabled="False"/>
+        </Menu>
 
-        <ctrl:CompleteComboBox Grid.Row="1"
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Theme: "
+                   Foreground="{DynamicResource SystemFontColorBrush}"
+                   VerticalAlignment="Center"/>
+        <ctrl:CompleteComboBox Grid.Row="1" Grid.Column="1"
                                ItemsSource="{Binding Themes}"
                                SelectedItem="{Binding SelectedTheme, UpdateSourceTrigger=PropertyChanged}"
                                TextSearch.TextPath="Code"
                                DisplayMemberPath="Code"
                                Style="{StaticResource CompleteComboBoxStyle}"
+                               HorizontalAlignment="Left"
                                Height="26" Width="300"/>
+        <!--<Path Style="{StaticResource Icon.Down.Triangle.Small}" Margin="5"/>-->
+        
+        <!--<ctrl:NumericPrice Value="100" DecimalDigit="2" MaxValue="100" MinValue="0"
+                           Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>-->
+
+        <TabControl Grid.Row="2" Grid.ColumnSpan="2"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TabItem Header="Colors">
+                
+            </TabItem>
+            <TabItem Header="Controls">
+
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
