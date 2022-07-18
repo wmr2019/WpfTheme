@@ -118,10 +118,6 @@
       <Project>{87119e7e-d5fc-48b2-97b3-1ba98fdaa55c}</Project>
       <Name>ThemeMetro</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ThemeModels\ThemeModels.csproj">
-      <Project>{1e7b9226-8c29-4d43-b206-3cb3312f4e59}</Project>
-      <Name>ThemeModels</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WTLib\WTLib.csproj">
       <Project>{c2bdc662-148f-4402-8ff1-57c4b608383a}</Project>
       <Name>WTLib</Name>

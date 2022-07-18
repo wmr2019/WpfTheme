@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/ComboBoxShare.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/FocusVisual.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/Icons.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/TextBoxShare.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/ToggleButtonShare.xaml"/>
+
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/ComboBox.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/CompleteComboBox.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/NumericPrice.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

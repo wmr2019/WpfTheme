@@ -5,27 +5,99 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="opt"
     >
+    
+    <!-- ======================================================================
+         ThemeBrush：主题颜色
+         ThemeFontBrush：主题字体颜色
+    -->
+    <SolidColorBrush x:Key="ThemeBrush"
+                     Color="#FFFFFF"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="ThemeFontBrush"
+                     Color="#000000"
+                     opt:Freeze="True" />
 
-    <Color x:Key="SystemColor">#FFFFFF</Color>
-    <Color x:Key="SystemFontColor">#000000</Color>
-    <Color x:Key="TextFontColor">#252526</Color>
-    <Color x:Key="WatermarkTextFontColor">#9e9e9e</Color>
+    <!-- ======================================================================
+         ControlIconBrush：控件内图标颜色
+         ControlWaterFontBrush：控件水印字体颜色
+         ControlBackgroundBrush：控件背景色
+         ControlBorderBrush：控件边框颜色
+    -->
+    <SolidColorBrush x:Key="ControlIconBrush"
+                     Color="#000000"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="ControlWaterFontBrush"
+                     Color="#9e9e9e"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush"
+                     Color="#616161"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="ControlBorderBrush"
+                     Color="#707070"
+                     opt:Freeze="True" />
 
-    <!-- Black0008 \ Black0028 \ Black0024 Black0008 Black0009-->
-    <Color x:Key="ControlBackgroundColor">#616161</Color>
-    <Color x:Key="ControlOverBackgroundColor">#333334</Color>
-    <Color x:Key="ControlBorderColor">#707070</Color>
+    <!-- ======================================================================
+         ContentHoverBrush：鼠标悬浮与控件内容上时，背景则
+         ControlHoverBrush：鼠标悬浮在控件上时，控件背景色
+         HoverFontBrush：鼠标悬停控件文本上时，字体颜色
+         HoverIconBrush：鼠标悬停控件图标上时，图标颜色
+    -->
+    <SolidColorBrush x:Key="ContentHoverBrush"
+                     Color="#99C9EF"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="ControlHoverBrush"
+                     Color="#0060CA"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="HoverFontBrush"
+                     Color="#000000"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="HoverIconBrush"
+                     Color="#FFFFFF"
+                     opt:Freeze="True" />
 
-    <!-- Blue0048 \ Blue0040 Black0032 -->
-    <Color x:Key="HoverBackgroundColor">#00334F</Color>
-    <Color x:Key="HoverFontColor">#FFFFFF</Color>
-    <Color x:Key="SelectBackgroundColor">#004E77</Color>
+    <!-- ======================================================================
+         SelectedBrush：项目选中颜色
+         SelectedFontBrush：项目选中字体颜色
+    -->
+    <SolidColorBrush x:Key="SelectedBrush"
+                     Color="#007ACC"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="SelectedFontBrush"
+                     Color="#FFFFFF"
+                     opt:Freeze="True" />
 
-    <!-- Black0100 \ Black0003 \ Blue0006 \ Black0009 -->
-    <Color x:Key="WindowBackgroundColor">#181920</Color>
-    <Color x:Key="WindowHeaderColor">#252526</Color>
-    <Color x:Key="ActiveBorderColor">#1E90FF</Color>
-    <Color x:Key="InactiveBorderColor">#808080</Color>
+    <!-- ======================================================================
+         WindowBackgroundBrush：窗体背景色
+         WindowHeaderColor：窗体头背景色
+    -->
+    <SolidColorBrush x:Key="WindowBackgroundBrush"
+                     Color="#181920"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="WindowHeaderBrush"
+                     Color="#252526"
+                     opt:Freeze="True" />
+
+    <!-- ======================================================================
+         ActiveColorBrush：当前活动颜色
+    -->
+    <SolidColorBrush x:Key="ActiveColorBrush"
+                     Color="#1E90FF"
+                     opt:Freeze="True" />
+
+    <!-- ======================================================================
+         DataGridFontBrush：控件字体颜色(暂定DataGrid字体颜色)
+         DataGridHoverColorBrush：
+         DataGridRowSelectedBrush：
+    -->
+    <SolidColorBrush x:Key="DataGridFontBrush"
+                     Color="#DAD1CF"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="DataGridHoverColorBrush"
+                     Color="#00334F"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="DataGridRowSelectedBrush"
+                     Color="#004E77"
+                     opt:Freeze="True" />
 
     <!--与主题配色无关，颜色固定不变-->
     <Color x:Key="Red0001">#C6101E</Color>
@@ -36,25 +108,6 @@
     <Color x:Key="Green0001">#00B01A</Color>
     <Color x:Key="Green0010">#00E700</Color>
     <Color x:Key="Green0006">#00E700</Color>
-
-    <SolidColorBrush x:Key="SystemColorBrush" Color="{StaticResource SystemColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="SystemFontColorBrush" Color="{StaticResource SystemFontColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="TextFontColorBrush" Color="{StaticResource TextFontColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="WatermarkTextFontColorBrush" Color="{StaticResource WatermarkTextFontColor}" opt:Freeze="True" />
-
-    <SolidColorBrush x:Key="ControlBackgroundColorBrush" Color="{StaticResource ControlBackgroundColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="ControlOverBackgroundColorBrush" Color="{StaticResource ControlOverBackgroundColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="ControlBorderColorBrush" Color="{StaticResource ControlBorderColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="ControlIconColorBrush" Color="{StaticResource SystemFontColor}" opt:Freeze="True" />
-
-    <SolidColorBrush x:Key="HoverBackgroundColorBrush" Color="{StaticResource HoverBackgroundColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="HoverFontColorBrush" Color="{StaticResource HoverFontColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="SelectBackgroundColorBrush" Color="{StaticResource SelectBackgroundColor}" opt:Freeze="True" />
-
-    <SolidColorBrush x:Key="WindowBackgroundColorBrush" Color="{StaticResource WindowBackgroundColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="WindowHeaderColorBrush" Color="{StaticResource WindowHeaderColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="ActiveBorderColorBrush" Color="{StaticResource ActiveBorderColor}" opt:Freeze="True" />
-    <SolidColorBrush x:Key="InactiveBorderColorBrush" Color="{StaticResource InactiveBorderColor}" opt:Freeze="True" />
 
     <SolidColorBrush x:Key="ConfirmButtonBackgroundBrush" Color="{StaticResource Red0001}" opt:Freeze="True" />
     <SolidColorBrush x:Key="CancelButtonBackgroundBrush" Color="{StaticResource Red0001}" opt:Freeze="True" />

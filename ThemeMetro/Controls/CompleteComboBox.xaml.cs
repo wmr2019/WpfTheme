@@ -11,6 +11,8 @@ namespace ThemeMetro.Controls
 {
     /// <summary>
     /// Interaction logic for CompleteComboBox.xaml
+    /// 
+    /// 不支持IsEditable = false
     /// </summary>
     public partial class CompleteComboBox : ComboBox
     {
@@ -209,8 +211,8 @@ namespace ThemeMetro.Controls
 
         public CompleteComboBox()
         {
+            IsEditable = true;
             InitializeComponent();
-
             AddHandler(
                 TextBoxBase.TextChangedEvent,
                 new TextChangedEventHandler(OnTextChanged)
@@ -219,6 +221,7 @@ namespace ThemeMetro.Controls
 
         protected override void OnDropDownOpened(EventArgs e)
         {
+            IsEditable = true;
             base.OnDropDownOpened(e);
             if (SelectedItem != null)
             {

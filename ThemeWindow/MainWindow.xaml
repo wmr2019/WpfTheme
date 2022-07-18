@@ -6,12 +6,17 @@
         xmlns:local="clr-namespace:ThemeWindow"
         xmlns:ctrl="clr-namespace:ThemeMetro.Controls;assembly=ThemeMetro"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+    </Window.Resources>
+    
     <Grid Margin="10,0,10,10"
           SnapsToDevicePixels="True"
           UseLayoutRounding="True"
           Grid.IsSharedSizeScope="True"
-          Background="{DynamicResource SystemColorBrush}">
+          Background="{DynamicResource ThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -39,7 +44,7 @@
         </Menu>
 
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Theme: "
-                   Foreground="{DynamicResource SystemFontColorBrush}"
+                   Foreground="{DynamicResource ThemeFontBrush}"
                    VerticalAlignment="Center"/>
         <ctrl:CompleteComboBox Grid.Row="1" Grid.Column="1"
                                ItemsSource="{Binding Themes}"
@@ -48,15 +53,25 @@
                                DisplayMemberPath="Code"
                                Style="{StaticResource CompleteComboBoxStyle}"
                                HorizontalAlignment="Left"
-                               Width="300"/>
+                               Width="200"
+                               IsEnabled="True"/>
         <ctrl:CompleteComboBox Grid.Row="1" Grid.Column="1"
-                               ItemsSource="{Binding Themes}"
-                               SelectedItem="{Binding SelectedTheme, UpdateSourceTrigger=PropertyChanged}"
+                               ItemsSource="{Binding TestThemes}"
+                               SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}"
+                               TextSearch.TextPath="Code"
+                               DisplayMemberPath="Code"
+                               Style="{StaticResource CompleteComboBoxStyle}"
+                               HorizontalAlignment="Center"
+                               Width="200"
+                               IsEditable="False"/>
+        <ctrl:CompleteComboBox Grid.Row="1" Grid.Column="1"
+                               ItemsSource="{Binding TestThemes}"
+                               SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}"
                                TextSearch.TextPath="Code"
                                DisplayMemberPath="Code"
                                Style="{StaticResource CompleteComboBoxStyle}"
                                HorizontalAlignment="Right"
-                               Width="300"
+                               Width="200"
                                IsEnabled="False"/>
         <!--<Path Style="{StaticResource Icon.Down.Triangle.Small}" Margin="5"/>-->
         
@@ -66,10 +81,20 @@
         <TabControl Grid.Row="2" Grid.ColumnSpan="2" Margin="0,5,0,0"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <TabItem Header="Colors">
-                
+                <Grid></Grid>
             </TabItem>
             <TabItem Header="Controls">
-
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <WrapPanel>
+                        <GroupBox Header="ComboBox" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            <StackPanel Orientation="Horizontal">
+                                <ComboBox ItemsSource="{Binding TestThemes}" SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Code" IsEditable="True" Style="{StaticResource ComboBoxStyle}" Width="200"/>
+                                <ComboBox ItemsSource="{Binding TestThemes}" SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Code" IsEditable="False" Style="{StaticResource ComboBoxStyle}" Width="200" Margin="4,0"/>
+                                <ComboBox ItemsSource="{Binding TestThemes}" SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Code" IsEnabled="False" Style="{StaticResource ComboBoxStyle}" Width="200"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </WrapPanel>
+                </ScrollViewer>
             </TabItem>
         </TabControl>
 
