@@ -78,9 +78,9 @@
                      opt:Freeze="True" />
 
     <!-- ======================================================================
-         ActiveColorBrush：当前活动颜色
+         ActiveBrush：当前活动颜色
     -->
-    <SolidColorBrush x:Key="ActiveColorBrush"
+    <SolidColorBrush x:Key="ActiveBrush"
                      Color="#1E90FF"
                      opt:Freeze="True" />
 
