@@ -1,8 +1,14 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:ctrl="clr-namespace:ThemeMetro.Controls">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ColorBrushes/DarkBrush.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/Generic.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
+    <Style TargetType="ctrl:CompleteComboBox" BasedOn="{StaticResource CompleteComboBoxStyle}"/>
+    <Style TargetType="ComboBox" BasedOn="{StaticResource ComboBoxStyle}"/>
+    <Style TargetType="ScrollBar" BasedOn="{StaticResource ScrollBarStyle}"/>
+    
 </ResourceDictionary>

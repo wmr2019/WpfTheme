@@ -10,6 +10,7 @@
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/ComboBox.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/CompleteComboBox.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/NumericPrice.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/Scroll.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

@@ -29,11 +29,13 @@
     <SolidColorBrush x:Key="ControlWaterFontBrush"
                      Color="#9e9e9e"
                      opt:Freeze="True" />
-    <SolidColorBrush x:Key="ControlBackgroundBrush"
-                     Color="#616161"
-                     opt:Freeze="True" />
     <SolidColorBrush x:Key="ControlBorderBrush"
                      Color="#707070"
+                     opt:Freeze="True" />
+
+    <Color x:Key="ControlBackgroundColor">#808080</Color>
+    <SolidColorBrush x:Key="ControlBackgroundBrush"
+                     Color="#808080"
                      opt:Freeze="True" />
 
     <!-- ======================================================================
@@ -53,6 +55,12 @@
                      opt:Freeze="True" />
     <SolidColorBrush x:Key="HoverIconBrush"
                      Color="#FFFFFF"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="HoverBrush"
+                     Color="#9E9E9E"
+                     opt:Freeze="True" />
+    <SolidColorBrush x:Key="PressBrush"
+                     Color="#C8C8C8"
                      opt:Freeze="True" />
 
     <!-- ======================================================================
