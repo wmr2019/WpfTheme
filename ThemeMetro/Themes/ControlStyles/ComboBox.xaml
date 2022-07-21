@@ -284,7 +284,7 @@
                 <Setter Property="BorderBrush"  Value="Red"  />
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
-                <Setter Property="Opacity" Value="0.3"/>
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
             </Trigger>
             <Trigger Property="IsEditable" Value="true">
                 <Setter Property="IsTabStop" Value="false"/>

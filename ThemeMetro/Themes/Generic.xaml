@@ -6,11 +6,13 @@
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/Icons.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/TextBoxShare.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/ToggleButtonShare.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/Specifications.xaml"/>
 
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/ComboBox.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/CompleteComboBox.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/NumericPrice.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/Scroll.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/TextBlock.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

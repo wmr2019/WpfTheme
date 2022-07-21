@@ -49,7 +49,7 @@
         <Setter Property="Template" Value="{StaticResource ComboBoxTemplate}"/>
         <Style.Triggers>
             <Trigger Property="IsEnabled" Value="false">
-                <Setter Property="Opacity" Value="0.6"/>
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
             </Trigger>
         </Style.Triggers>
     </Style>

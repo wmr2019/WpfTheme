@@ -10,5 +10,6 @@
     <Style TargetType="ctrl:CompleteComboBox" BasedOn="{StaticResource CompleteComboBoxStyle}"/>
     <Style TargetType="ComboBox" BasedOn="{StaticResource ComboBoxStyle}"/>
     <Style TargetType="ScrollBar" BasedOn="{StaticResource ScrollBarStyle}"/>
+    <Style TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}"/>
 
 </ResourceDictionary>

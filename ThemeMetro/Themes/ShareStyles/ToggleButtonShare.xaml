@@ -35,7 +35,7 @@
                                  Value="false">
                             <Setter Property="Opacity"
                                     TargetName="dtPath"
-                                    Value="0.6"/>
+                                    Value="{DynamicResource DisabledOpacity}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver"
                                  Value="true">

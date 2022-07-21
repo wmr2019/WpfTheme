@@ -60,7 +60,7 @@
                      Color="#9E9E9E"
                      opt:Freeze="True" />
     <SolidColorBrush x:Key="PressBrush"
-                     Color="#B4B4B4"
+                     Color="#646464"
                      opt:Freeze="True" />
 
     <!-- ======================================================================

@@ -169,7 +169,7 @@
             <Trigger Property="IsEnabled"
                      Value="false">
                 <Setter Property="Opacity"
-                        Value="0.5"/>
+                        Value="{DynamicResource DisabledOpacity}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
