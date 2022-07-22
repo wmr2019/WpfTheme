@@ -4,9 +4,9 @@
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/ComboBoxShare.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/FocusVisual.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/Icons.xaml"/>
+        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/Specifications.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/TextBoxShare.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/ToggleButtonShare.xaml"/>
-        <ResourceDictionary Source="/ThemeMetro;component/Themes/ShareStyles/Specifications.xaml"/>
 
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/ComboBox.xaml"/>
         <ResourceDictionary Source="/ThemeMetro;component/Themes/ControlStyles/CompleteComboBox.xaml"/>

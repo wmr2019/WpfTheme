@@ -4,6 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     >
 
+    <Thickness x:Key="SpaceInner" Left="9" Top="4" Right="9" Bottom="5"/>
+    <Thickness x:Key="BorderSize" Left="1" Top="1" Right="1" Bottom="1"/>
+
     <sys:Double x:Key="DisabledOpacity">0.5</sys:Double>
     
     <sys:Double x:Key="ScollBarSize">14</sys:Double>

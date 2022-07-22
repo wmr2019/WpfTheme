@@ -9,15 +9,6 @@
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="900">
 
-    <Window.Resources>
-        <Style TargetType="{x:Type TabControl}">
-            <Setter Property="Foreground" Value="{DynamicResource ThemeFontBrush}"/>
-        </Style>
-        <Style TargetType="{x:Type TabItem}">
-            <Setter Property="Foreground" Value="{DynamicResource ThemeFontBrush}"/>
-        </Style>
-    </Window.Resources>
-    
     <Grid Margin="10,0,10,10"
           SnapsToDevicePixels="True"
           UseLayoutRounding="True"
@@ -68,56 +59,54 @@
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                     Background="Transparent">
             <TabItem Header="Controls">
-                <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
-                    <WrapPanel>
-                        <GroupBox Header="CompleteComboBox" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock Text="注意：IsEditable属性对此控件无效" Margin="0,4" FontWeight="Bold"/>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="启用："/>
-                                    <ctrl:CompleteComboBox ItemsSource="{Binding TestThemes}"
+                <WrapPanel>
+                    <GroupBox Header="CompleteComboBox" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="注意：IsEditable属性对此控件无效" Margin="0,4" FontWeight="Bold"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="启用："/>
+                                <ctrl:CompleteComboBox ItemsSource="{Binding TestThemes}"
                                                        SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}"
                                                        TextSearch.TextPath="Code"
                                                        DisplayMemberPath="Code"
                                                        HorizontalAlignment="Center"
                                                        Width="200"/>
-                                    <TextBlock Text="禁用：" Margin="10,0,0,0"/>
-                                    <ctrl:CompleteComboBox ItemsSource="{Binding TestThemes}"
+                                <TextBlock Text="禁用：" Margin="10,0,0,0"/>
+                                <ctrl:CompleteComboBox ItemsSource="{Binding TestThemes}"
                                                        SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}"
                                                        TextSearch.TextPath="Code"
                                                        DisplayMemberPath="Code"
                                                        HorizontalAlignment="Right"
                                                        Width="200"
                                                        IsEnabled="False"/>
-                                </StackPanel>
                             </StackPanel>
-                        </GroupBox>
-                        <GroupBox Header="ComboBox" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="启用&amp;可编辑："/>
-                                <ComboBox ItemsSource="{Binding TestThemes}"
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="ComboBox" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="启用&amp;可编辑："/>
+                            <ComboBox ItemsSource="{Binding TestThemes}"
                                           SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}"
                                           DisplayMemberPath="Code"
                                           IsEditable="True"
                                           Width="200"/>
-                                <TextBlock Text="启用&amp;不可编辑："
+                            <TextBlock Text="启用&amp;不可编辑："
                                            Margin="4,0,0,0"/>
-                                <ComboBox ItemsSource="{Binding TestThemes}"
+                            <ComboBox ItemsSource="{Binding TestThemes}"
                                           SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}"
                                           DisplayMemberPath="Code"
                                           IsEditable="False"
                                           Width="200"/>
-                                <TextBlock Text="禁用："
+                            <TextBlock Text="禁用："
                                            Margin="4,0,0,0"/>
-                                <ComboBox ItemsSource="{Binding TestThemes}"
+                            <ComboBox ItemsSource="{Binding TestThemes}"
                                           SelectedItem="{Binding SelectedTestTheme, UpdateSourceTrigger=PropertyChanged}"
                                           DisplayMemberPath="Code"
                                           IsEnabled="False"
                                           Width="200"/>
-                            </StackPanel>
-                        </GroupBox>
-                    </WrapPanel>
-                </ScrollViewer>
+                        </StackPanel>
+                    </GroupBox>
+                </WrapPanel>
             </TabItem>
             <TabItem Header="Colors">
                 <TabItem.Resources>
@@ -177,31 +166,31 @@
 
                         <Rectangle Grid.Column="0" Grid.Row="4" Fill="{DynamicResource HoverFontBrush}"/>
                         <Rectangle Grid.Column="1" Grid.Row="4" Fill="{DynamicResource HoverIconBrush}"/>
-                        <Rectangle Grid.Column="2" Grid.Row="4" Fill="{DynamicResource SelectedBrush}"/>
-                        <Rectangle Grid.Column="3" Grid.Row="4" Fill="{DynamicResource SelectedFontBrush}"/>
+                        <Rectangle Grid.Column="2" Grid.Row="4" Fill="{DynamicResource HoverBrush}"/>
+                        <Rectangle Grid.Column="3" Grid.Row="4" Fill="{DynamicResource PressBrush}"/>
                         <TextBlock Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,0,5">HoverFontBrush</TextBlock>
                         <TextBlock Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,5,5">HoverIconBrush</TextBlock>
-                        <TextBlock Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,5,5">SelectedBrush</TextBlock>
-                        <TextBlock Grid.Column="3" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,5,5">SelectedFontBrush</TextBlock>
+                        <TextBlock Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,5,5">HoverBrush</TextBlock>
+                        <TextBlock Grid.Column="3" Grid.Row="5" HorizontalAlignment="Center" Margin="0,0,5,5">PressBrush</TextBlock>
 
 
-                        <Rectangle Grid.Column="0" Grid.Row="6" Fill="{DynamicResource WindowBackgroundBrush}"/>
-                        <Rectangle Grid.Column="1" Grid.Row="6" Fill="{DynamicResource WindowHeaderBrush}"/>
-                        <Rectangle Grid.Column="2" Grid.Row="6" Fill="{DynamicResource ActiveBrush}"/>
-                        <!--<Rectangle Grid.Column="3" Grid.Row="6" Fill="{DynamicResource }"/>-->
-                        <TextBlock Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" Margin="0,0,0,5">WindowBackgroundBrush</TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="7" HorizontalAlignment="Center" Margin="0,0,5,5">WindowHeaderBrush</TextBlock>
-                        <TextBlock Grid.Column="2" Grid.Row="7" HorizontalAlignment="Center" Margin="0,0,5,5">ActiveBrush</TextBlock>
-                        <TextBlock Grid.Column="3" Grid.Row="7" HorizontalAlignment="Center" Margin="0,0,5,5"></TextBlock>
+                        <Rectangle Grid.Column="0" Grid.Row="6" Fill="{DynamicResource SelectedBrush}"/>
+                        <Rectangle Grid.Column="1" Grid.Row="6" Fill="{DynamicResource SelectedFontBrush}"/>
+                        <Rectangle Grid.Column="2" Grid.Row="6" Fill="{DynamicResource WindowBackgroundBrush}"/>
+                        <Rectangle Grid.Column="3" Grid.Row="6" Fill="{DynamicResource WindowHeaderBrush}"/>
+                        <TextBlock Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" Margin="0,0,0,5">SelectedBrush</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="7" HorizontalAlignment="Center" Margin="0,0,5,5">SelectedFontBrush</TextBlock>
+                        <TextBlock Grid.Column="2" Grid.Row="7" HorizontalAlignment="Center" Margin="0,0,5,5">WindowBackgroundBrush</TextBlock>
+                        <TextBlock Grid.Column="3" Grid.Row="7" HorizontalAlignment="Center" Margin="0,0,5,5">WindowHeaderBrush</TextBlock>
 
-                        <Rectangle Grid.Column="0" Grid.Row="8" Fill="{DynamicResource DataGridFontBrush}"/>
-                        <Rectangle Grid.Column="1" Grid.Row="8" Fill="{DynamicResource DataGridHoverColorBrush}"/>
-                        <Rectangle Grid.Column="2" Grid.Row="8" Fill="{DynamicResource DataGridRowSelectedBrush}"/>
-                        <!--<Rectangle Grid.Column="3" Grid.Row="8" Fill="{DynamicResource }"/>-->
-                        <TextBlock Grid.Column="0" Grid.Row="9" HorizontalAlignment="Center" Margin="0,0,0,5">DataGridFontBrush</TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="9" HorizontalAlignment="Center" Margin="0,0,5,5">DataGridHoverColorBrush</TextBlock>
-                        <TextBlock Grid.Column="2" Grid.Row="9" HorizontalAlignment="Center" Margin="0,0,5,5">DataGridRowSelectedBrush</TextBlock>
-                        <TextBlock Grid.Column="3" Grid.Row="9" HorizontalAlignment="Center" Margin="0,0,5,5"></TextBlock>
+                        <Rectangle Grid.Column="0" Grid.Row="8" Fill="{DynamicResource ActiveBrush}"/>
+                        <Rectangle Grid.Column="1" Grid.Row="8" Fill="{DynamicResource DataGridFontBrush}"/>
+                        <Rectangle Grid.Column="2" Grid.Row="8" Fill="{DynamicResource DataGridHoverBrush}"/>
+                        <Rectangle Grid.Column="3" Grid.Row="8" Fill="{DynamicResource DataGridRowSelectedBrush}"/>
+                        <TextBlock Grid.Column="0" Grid.Row="9" HorizontalAlignment="Center" Margin="0,0,0,5">ActiveBrush</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="9" HorizontalAlignment="Center" Margin="0,0,5,5">DataGridFontBrush</TextBlock>
+                        <TextBlock Grid.Column="2" Grid.Row="9" HorizontalAlignment="Center" Margin="0,0,5,5">DataGridHoverBrush</TextBlock>
+                        <TextBlock Grid.Column="3" Grid.Row="9" HorizontalAlignment="Center" Margin="0,0,5,5">DataGridRowSelectedBrush</TextBlock>
 
                         <Rectangle Grid.Column="0" Grid.Row="10" Fill="{DynamicResource ConfirmButtonBackgroundBrush}"/>
                         <Rectangle Grid.Column="1" Grid.Row="10" Fill="{DynamicResource CancelButtonBackgroundBrush}"/>
@@ -213,6 +202,18 @@
                         <TextBlock Grid.Column="3" Grid.Row="11" HorizontalAlignment="Center" Margin="0,0,5,5">SellButtonBackgroundBrush</TextBlock>
                     </Grid>
                 </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Other">
+            </TabItem>
+            <TabItem Header="Other">
+            </TabItem>
+            <TabItem Header="Other">
+            </TabItem>
+            <TabItem Header="Other">
+            </TabItem>
+            <TabItem Header="Other">
+            </TabItem>
+            <TabItem Header="Other">
             </TabItem>
         </TabControl>
 
